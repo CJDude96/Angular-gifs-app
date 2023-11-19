@@ -1,10 +1,14 @@
 <div class="bg-dark border-right p-3" id="sidebar">
-    <h3 class="text-light">Gifs App</h3>
-    <hr class="text-white">
+  <h3 class="text-light">Gifs App</h3>
+  <hr class="text-white" />
 
-    <div class="list-group list-reset">
-        <button *ngFor="let tag of tagsList" class="list-group-item list-group-item-action">
-            {{tag | titlecase }}
-        </button>
-    </div>
+  <div class="list-group list-reset">
+    <button
+      *ngFor="let tag of tagsList"
+      (click)="searchButton(tag)"
+      class="list-group-item list-group-item-action"
+    >
+      {{ tag | titlecase }}
+    </button>
+  </div>
 </div>
